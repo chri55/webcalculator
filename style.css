@@ -7,15 +7,27 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 :root {
   --outline: hsla(200, 30%, 20%, 1);
-  --bgColor: hsla(200, 30%, 30%, 1);
-  --highlightColor: hsla(200, 30%, 40%, 1);
+  --bg: url('./cool-background.png');
+  --bgColor: hsla(100, 50%, 30%, .5);
+  --highlightColor: hsla(100, 50%, 40%, .9);
   --operatorsColor: hsla(150, 50%, 30%, 1);
   --operatorsHighlight: hsla(150, 50%, 40%, 1);
+  background: var(--bg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+
 }
 
 body {
-  background-color: var(--bgColor);
+  width: 100%;
+  height: 100%;
   display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 }
 
 p {
@@ -28,22 +40,22 @@ p {
   user-select:none;
   width: 100%;
   height: 100%;
-  align-self:flex-start;
 }
 
 
 .container {
-  width: 500px;
-  height: 800px;
+  max-width: 800px;
+  max-height: 800px;
   flex: 1;
   display: flex;
   flex-direction: column;
-  outline: 3px solid var(--outline);
 }
 .row {
   flex: 1;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  border-radius: 80px;
 }
 
 .display {
@@ -56,7 +68,7 @@ p {
   cursor: pointer;
   display: flex;
   flex-direction: row;
-  outline: 3px solid var(--outline);
+  border-radius: 75px;
   /* align-content: center; */
   /* justify-content: center; */
   /* align-items: center; */
